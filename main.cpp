@@ -25,9 +25,9 @@ int main() {
 }
 
 string* reverseArray(string* arr, int size) {
-    string temp{};
-    for (int i{0}; i < size; ++i) {
-        
+    string temp{*arr};
+    for (int i{0}; i < size / 2; ++i) {
+        *(arr + i) = *(arr + (size - 1) - i);
     }
-
+    return arr;
 }
