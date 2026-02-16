@@ -28,6 +28,9 @@ int main() {
     return 0;
 }
 
+// reverseArray() reverses the elements of a dynamic array
+// arguments: string* arr, int size
+// return: pointer to the reversed array
 string* reverseArray(string* arr, int size) {
     string temp{};
     for (int i{0}; i < size / 2; ++i) {
@@ -38,6 +41,8 @@ string* reverseArray(string* arr, int size) {
     return arr;
 }
 
+// displayArray() outputs arrays
+// arguments: const string* arr, int size
 void displayArray(const string* arr, int size) {
     for (int i{0}; i < size; ++i)
         cout << *(arr + i) << " ";
