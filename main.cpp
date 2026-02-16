@@ -5,7 +5,7 @@
 using namespace std;
 
 string* reverseArray(string* arr, int size);
-void populateArr(string* arr, int size);
+void displayArray(string* arr, int size);
 
 int main() {
     const int SIZE{5};
@@ -17,8 +17,12 @@ int main() {
     *(myArr + 3) = "Nathan";
     *(myArr + 4) = "Arisu";
 
-    cout << reverseArray(myArr, SIZE); // Returns a pointer
-    cout << *(reverseArray(myArr, SIZE));
+    cout << "Original array: ";
+    displayArray(myArr, SIZE);
+
+    reverseArray(myArr, SIZE);
+    cout << "Reversed array: ";
+    displayArray(myArr, SIZE);
 
     delete[] myArr;
     return 0;
@@ -32,4 +36,10 @@ string* reverseArray(string* arr, int size) {
         *(arr + (size - 1) - i) = temp;
     }
     return arr;
+}
+
+void displayArray(string* arr, int size) {
+    for (int i{0}; i < size; ++i)
+        cout << *(arr + i) << " ";
+    cout << '\n';
 }
