@@ -17,16 +17,17 @@ int main() {
     *(myArr + 3) = "Nathan";
     *(myArr + 4) = "Arisu";
 
-    cout << reverseArray(myArr, SIZE);
+    cout << reverseArray(myArr, SIZE); // Returns a pointer
+    cout << *(reverseArray(myArr, SIZE));
 
     delete[] myArr;
     return 0;
 }
 
 string* reverseArray(string* arr, int size) {
-    string* reversedArr{new string[size]};
-    for (int i{size}; i > 0; --i) {
-        *(arr + i) = *reversedArr++;
+    string temp{};
+    for (int i{0}; i < size; ++i) {
+        
     }
-    return reversedArr;
+
 }
