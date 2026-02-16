@@ -5,7 +5,7 @@
 using namespace std;
 
 string* reverseArray(string* arr, int size);
-void displayArray(string* arr, int size);
+void displayArray(const string* arr, int size);
 
 int main() {
     const int SIZE{5};
@@ -38,7 +38,7 @@ string* reverseArray(string* arr, int size) {
     return arr;
 }
 
-void displayArray(string* arr, int size) {
+void displayArray(const string* arr, int size) {
     for (int i{0}; i < size; ++i)
         cout << *(arr + i) << " ";
     cout << '\n';
